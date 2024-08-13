@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title th:text="${title}">Document</title>
+</head>
+
+<body>
+    <h1 th:text="${title}"></h1>
+    <div th:if="${users.isEmpty()}"> No se encontro ningun registro....
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de usuario</th>
+                <th>Apellidos de usuario</th>
+                <th>Correo electronico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user: ${users}">
+
+                <!-- USANDO IF ESPECIALES -->
+
+                <td th:text="${user.nombre != null ? user.nombre : 'No Disponible'}"></td>
+
+                <td th:text="${user.apellido != null ? user.apellido : 'No Disponible'}"></td>
+
+                <td th:text="${user.cedula != null ? user.cedula : 'No Disponible'}"></td>
+
+
+                <!-- IF NORMALES -->
+                <!-- 
+                <td th:if="${user.cedula}" th:text="${user.cedula}"></td>
+                <td th:if="${not (user.cedula != null)}" th:text="${'No Disponible'}"></td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
