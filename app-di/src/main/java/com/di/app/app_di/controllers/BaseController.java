@@ -15,6 +15,7 @@ import com.di.app.app_di.services.ProductService;
 @RequestMapping("/api")
 public class BaseController {
 
+    // INJECTAMOS ESTA DEPENDECIA 
     @Autowired
     private ProductService serviceProduct;
 
@@ -22,6 +23,8 @@ public class BaseController {
     public List<Product> list(){
         return serviceProduct.findAll();
     }
+
+    
     @GetMapping("/{id}")
     public Product show(@PathVariable Long id){
         return serviceProduct.findById(id);

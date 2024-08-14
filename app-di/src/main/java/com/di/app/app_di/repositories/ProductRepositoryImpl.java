@@ -6,8 +6,11 @@ import org.springframework.stereotype.Repository;
 
 import com.di.app.app_di.models.Product;
 
+// EK REPOSITORIO SE USA PARA LA PERSISTENCIA DE DATOS Y PARA LA COMUNICACION CON LA DB
 @Repository
 public class ProductRepositoryImpl implements ProductRepository {
+
+        // PERSISTENCIA DE DATOS - DB IMAGINARIA
         List<Product> products;
 
         public ProductRepositoryImpl() {
@@ -24,10 +27,13 @@ public class ProductRepositoryImpl implements ProductRepository {
                 new Product(10L, "Webcam", 250L)               
             );
         }
+
+        // COMUNICACION CON LA DB IMAGINARIA
         @Override
         public List<Product> findAll(){
            return products; 
         }
+
         @Override
         public Product findById(Long id){
             return products.stream().filter(p -> p.getId().equals(id)).findFirst().orElseThrow();
