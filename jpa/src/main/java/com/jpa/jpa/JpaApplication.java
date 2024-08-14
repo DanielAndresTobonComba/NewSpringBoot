@@ -42,7 +42,7 @@ public class JpaApplication implements CommandLineRunner{
 		
 	}
 
-	@Transactional
+/* 	@Transactional
 	public void create() {
 		
 		Scanner scanner = new Scanner(System.in);
@@ -182,7 +182,7 @@ public class JpaApplication implements CommandLineRunner{
 
 	}
 	
-
+ */
 
 
 

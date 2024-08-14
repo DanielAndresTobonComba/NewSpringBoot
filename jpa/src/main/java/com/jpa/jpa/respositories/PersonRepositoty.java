@@ -16,7 +16,7 @@ import java.util.Optional;
 
 public interface PersonRepositoty extends JpaRepository<Person, Long> {
 
-    // CONSULTA USANDO LENGUAJE JPA
+/*     // CONSULTA USANDO LENGUAJE JPA
     List<Person> findByProgrammingLanguage(String programmingLanguage);
 
     // CREO MI PROPIA CONSULTA CON QUERY 
@@ -113,6 +113,6 @@ public interface PersonRepositoty extends JpaRepository<Person, Long> {
     Long findAllProgrammingLanguageDistinctCount();
     
     @Query("select distinct(p.programmingLanguage) from Person p")
-    List<String> findAllProgrammingLanguageDistinct();
+    List<String> findAllProgrammingLanguageDistinct(); */
 
 }
