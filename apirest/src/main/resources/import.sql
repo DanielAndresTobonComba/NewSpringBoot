@@ -1,0 +1,1 @@
+INSERT INTO countries (namecountry , codecountry) VALUES ("carmaland" , "car1" );
