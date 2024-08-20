@@ -9,6 +9,8 @@ import jakarta.persistence.Embeddable;
 // ESTO ES PARA INCRUTAR ESTA CLASE EN OTRA ESTARA EMBEBIDA DONDE CUYODS ATRIBUTOS SE PEUDEN ALMACENAR EN OTRA TABLA 
 
 // SE USA EMBEDDABLE Y EL IMPLEMENTS SEREIALIZABLE 
+
+// Este se tambien se le pueden implementar atributos propios de la relacion
 @Embeddable
 public class ProductInvoicePk implements Serializable {
 
