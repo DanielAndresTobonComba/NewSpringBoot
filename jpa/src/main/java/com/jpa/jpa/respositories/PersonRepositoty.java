@@ -19,9 +19,10 @@ public interface PersonRepositoty extends JpaRepository<Person, Long> {
 /*     // CONSULTA USANDO LENGUAJE JPA
     List<Person> findByProgrammingLanguage(String programmingLanguage);
 
-    // CREO MI PROPIA CONSULTA CON QUERY 
+    CREO MI PROPIA CONSULTA CON QUERY 
     @Query("select p from Person p where p.programmingLanguage=?1 and p.name=?2")
-    // NOMBRE DE LA CONSULTA Y VALOR QUE RETORNA 
+    
+    NOMBRE DE LA CONSULTA Y VALOR QUE RETORNA 
     List<Person> buscarByProgrammingLanguage(String programmingLanguage, String name);
 
 

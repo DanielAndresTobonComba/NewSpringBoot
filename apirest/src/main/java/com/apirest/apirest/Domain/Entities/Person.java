@@ -2,6 +2,7 @@ package com.apirest.apirest.Domain.Entities;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
@@ -21,6 +22,11 @@ public class Person {
 
     @Column(name = "last_name" , columnDefinition = "VARCHAR(50)" , nullable = false)
     private String lastName;
+
+
+    // ACA ENBEBO LA CLASE AUDIT
+    @Embedded 
+    private Audit audit;
 
     @ManyToOne
     City cities;
@@ -65,6 +71,22 @@ public class Person {
 
     public void setCities(City cities) {
         this.cities = cities;
+    }
+
+    public Audit getAudit() {
+        return audit;
+    }
+
+    public void setAudit(Audit audit) {
+        this.audit = audit;
+    }
+
+    public TypePerson getTypePersons() {
+        return typePersons;
+    }
+
+    public void setTypePersons(TypePerson typePersons) {
+        this.typePersons = typePersons;
     }
 
     
