@@ -6,12 +6,12 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
+
 @Entity
 @Table(name = "detail_product")
 public class DetailProduct {    
 
-    @EmbeddedId                                                                                                                                                                                                        
-    ProductInvoicePk id;                      
+    @EmbeddedId                                                                                                                                    ProductInvoicePk id;                      
 
     private Integer quality;                                               
     private Double price; 
@@ -26,7 +26,7 @@ public class DetailProduct {
 
 
     @ManyToOne
-    @JoinColumn(name = "id_invoice" , insertable = false , updatable = false)
+    @JoinColumn(name = "id_product" , insertable = false , updatable = false)
     private Product product;
 
 
