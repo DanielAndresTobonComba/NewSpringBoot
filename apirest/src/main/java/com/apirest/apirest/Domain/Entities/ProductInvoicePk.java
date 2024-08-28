@@ -12,6 +12,7 @@ import jakarta.persistence.Embeddable;
 
 // Este se tambien se le pueden implementar atributos propios de la relacion
 @Embeddable
+
 public class ProductInvoicePk implements Serializable {
 
     @Column(name = "id_product")

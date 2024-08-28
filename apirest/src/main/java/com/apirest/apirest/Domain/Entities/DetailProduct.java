@@ -11,8 +11,8 @@ import jakarta.persistence.Table;
 @Table(name = "detail_product")
 public class DetailProduct {    
 
-    @EmbeddedId                                                                                                                                    ProductInvoicePk id;                      
-
+    @EmbeddedId                                                                                                                                                       
+    ProductInvoicePk id;   
     private Integer quality;                                               
     private Double price; 
 
