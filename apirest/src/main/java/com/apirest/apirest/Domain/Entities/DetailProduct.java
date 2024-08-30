@@ -13,6 +13,7 @@ public class DetailProduct {
 
     @EmbeddedId                                                                                                                                                       
     ProductInvoicePk id;   
+    
     private Integer quality;                                               
     private Double price; 
 
